@@ -1,0 +1,40 @@
+html{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: #222121 ;
+}
+h1{
+    color: #b49a66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: #939393;
+}
+td{
+    background-color: white;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    background-color: transparent;
+}
+input{
+    border-radius: 5px;
+    height: 30px;
+}
+
+button{
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #b49a66;
+    color: #222121;
+}
