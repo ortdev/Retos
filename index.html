@@ -12,16 +12,12 @@
         <h3>
             INGRESO:
         </h3>
-        <input id="ingreso" type="number">
+        <input id="in" type="number">
 
+        <button id="b1">GUARDAR</button>
+        <script src="ingreso.js">
 
-
-        <h3>
-            CONCEPTO:
-        </h3>
-        <input id="concepto1" type="texto">
-
-        <button>GUARDAR</button>
+        </script>
 
         <h3>EGRESO:
 
@@ -31,118 +27,13 @@
         <h3>
             CONCEPTO:
         </h3>
-        
+
         <input id="concepto2" type="texto">
         <button>GUARDAR</button>
-
-        <table>
-            <tr>
-                <td>INGRESO:</td>
-                <td><input type="text" disabled></td>
-            </tr>
-
-
-            <td id=>EGRESO:</td>
-            <tr>
-                <td id="renta">
-                    RENTA
-                </td>
-                <td><input type="text" disabled></td>
-
-
-            </tr>
-
-            <tr>
-                <td>COMIDA</td>
-                <td><input type="text" disabled></td>
-            </tr>
-            <tr>
-                <td>TRANSPORTE</td>
-                <td><input type="text" disabled></td>
-            </tr>
-            <tr>
-                <td>
-                    SERVICIOS
-                </td>
-                <td>
-                    <input type="text" disabled>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    ENTRETENIMIENTO
-                </td>
-                <td>
-                    <input type="text" disabled>
-                </td>
-            </tr>
-
-
-
-        </table>
-
-
 
 </body>
 <style>
     @import url(style.css);
 </style>
-
-<script>
-
-
-let totalIngresos = 0;
-let totalGastos = 0;
-
-function guardarIngreso() {
-  // Obtener monto e concepto de ingreso de los campos de entrada
-  const montoIngreso = parseFloat(document.getElementById("ingreso").value);
-  const conceptoIngreso = document.getElementById("concepto1").value;
-
-  // Validar entrada (opcional: verifica si montoIngreso es un número y conceptoIngreso no está vacío)
-
-  // Actualizar totales y mostrar
-  totalIngresos += montoIngreso;
-  document.getElementById("totalIngreso").value = totalIngresos;
-
-  // Agregar nueva entrada de ingreso a la tabla (crea una nueva fila de tabla y completa las celdas)
-
-  // Limpiar campos de entrada
-  document.getElementById("ingreso").value = "";
-  document.getElementById("concepto1").value = "";
-}
-
-function guardarGasto() {
-  // Obtener monto y concepto de gasto de los campos de entrada
-  const montoGasto = parseFloat(document.getElementById("egreso1").value);
-  const conceptoGasto = document.getElementById("concepto2").value;
-
-  // Validar entrada (opcional)
-
-  // Actualizar totales y mostrar
-  totalGastos += montoGasto;
-  document.getElementById("totalGastos").value = totalGastos;  // Asumiendo que tienes un elemento con ID "totalGastos" para mostrar el total de gastos
-
-  // Calcular y mostrar saldo
-  const saldo = totalIngresos - totalGastos;
-  document.getElementById("balance").value = saldo;  // Asumiendo que tienes un elemento con ID "balance" para mostrar el saldo
-
-  // Agregar nueva entrada de gasto a la tabla
-
-  // Limpiar campos de entrada
-  document.getElementById("egreso1").value = "";
-  document.getElementById("concepto2").value = "";
-}
-
-// Agregar eventos click a los botones "Guardar" de los formularios de ingresos y gastos
-const botonIngreso = document.querySelector("button:nth-child(2)"); // Asumiendo que el primer botón es para ingresos
-const botonGasto = document.querySelector("button:nth-child(6)"); // Asumiendo que el segundo botón es para gastos
-
-botonIngreso.addEventListener("click", guardarIngreso);
-botonGasto.addEventListener("click", guardarGasto);
-
-
-</script>
 
 </html>
